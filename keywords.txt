@@ -1,0 +1,33 @@
+##############################################################
+# Syntax Coloring Map for LCT200 ESP8266 WiFi Shield Library #
+##############################################################
+# Class
+##############################################################
+
+LCT200	        KEYWORD1
+LCT200Serial	KEYWORD1
+LCT200_Config	KEYWORD1
+ESP_Wifi	    KEYWORD1
+
+##############################################################
+# Methods and Functions
+##############################################################
+
+begin	        KEYWORD2
+getMode	        KEYWORD2
+setMode	        KEYWORD2
+connectAP	    KEYWORD2
+udpConnect	    KEYWORD2
+udpSend	        KEYWORD2
+createAP	    KEYWORD2
+writeConfig	    KEYWORD2
+readConfig	    KEYWORD2
+enableISR	    KEYWORD2
+
+##############################################################
+# Constants
+##############################################################
+
+WIFI_STA	    LITERAL1
+WIFI_AP	        LITERAL1
+WIFI_BOTH	    LITERAL1
