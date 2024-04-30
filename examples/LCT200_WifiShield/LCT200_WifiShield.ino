@@ -1,4 +1,5 @@
 #include <Wire.h>
+
 #include "LCT200.h"
 
 #define DATA_LENGTH 32
@@ -8,7 +9,6 @@ bool signal1_status = false;  // 用于判断串口1数据接收完毕，信号�
 uint8_t data_buf[DATA_LENGTH] = {0};
 
 LCT200 lct;
-
 
 void setup() {
     Serial.begin(115200);

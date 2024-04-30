@@ -20,7 +20,7 @@
 
 
 
-bool ESP_Wifi::begin(LCT200Serial &serial, uint16_t baud = 115200) {
+bool ESP_Wifi::begin(LCT200Serial &serial, uint32_t baud) {
     _serial = &serial;
 
     _serial->print("AT\r\n");

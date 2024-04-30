@@ -57,7 +57,7 @@ private:
     void clearBuf();
 
 public:
-    bool begin(LCT200Serial &serial, uint16_t baud = 115200);
+    bool begin(LCT200Serial &serial, uint32_t baud = 115200);
 
     bool setMode(esp_wifi_mode mode);
     bool connectAP(const char * ssid, const char * pwd);

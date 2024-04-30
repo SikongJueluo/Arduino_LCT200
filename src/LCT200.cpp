@@ -96,6 +96,11 @@ int LCT200::readConfig(uint8_t data[11], uint16_t timeout) {
     uint8_t count = 0;
     uint32_t t1 = millis();
 
+    pinMode(_config.Signal0, OUTPUT);
+    pinMode(_config.Signal1, OUTPUT);
+    digitalWrite(_config.Signal0, HIGH);
+    digitalWrite(_config.Signal1, HIGH);
+    delay(100);
     digitalWrite(_config.Signal0, LOW);
     delay(300);
 
@@ -110,5 +115,9 @@ int LCT200::readConfig(uint8_t data[11], uint16_t timeout) {
     if (timeout > 0 && millis() - t1 >= timeout && count < 11) count = -1; // timeout
 
     digitalWrite(_config.Signal0, HIGH);
+
+    pinMode(_config.Signal0, INPUT_PULLUP);
+    pinMode(_config.Signal1, INPUT_PULLUP);
+
     return count;
 }
